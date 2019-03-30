@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>TF-IDF | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/README.html">
+  <meta name="description" content="什么是TF-IDFTF-IDF（Term Frequency-Inverse Document Frequency，中文为：词频-逆文档频率)是一种用于文本检测与文本探勘的加权技术。它基于统计方法，评估一个字词对于一篇文本或者一个语料库中的其中一份文件的重要程度。字词的重要程度随着该字词在文章中出现的频率而增加，但是同时随着在语料库中所有文章中出现的频率而下降。简而言之，就是在某一篇文章出现的次数">
+<meta name="keywords" content="机器学习,NLP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TF-IDF">
+<meta property="og:url" content="http://yoursite.com/2019/03/28/TF-IDF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta property="og:description" content="什么是TF-IDFTF-IDF（Term Frequency-Inverse Document Frequency，中文为：词频-逆文档频率)是一种用于文本检测与文本探勘的加权技术。它基于统计方法，评估一个字词对于一篇文本或者一个语料库中的其中一份文件的重要程度。字词的重要程度随着该字词在文章中出现的频率而增加，但是同时随着在语料库中所有文章中出现的频率而下降。简而言之，就是在某一篇文章出现的次数">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T05:47:27.011Z">
+<meta property="og:updated_time" content="2019-03-28T04:18:27.492Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta name="twitter:title" content="TF-IDF">
+<meta name="twitter:description" content="什么是TF-IDFTF-IDF（Term Frequency-Inverse Document Frequency，中文为：词频-逆文档频率)是一种用于文本检测与文本探勘的加权技术。它基于统计方法，评估一个字词对于一篇文本或者一个语料库中的其中一份文件的重要程度。字词的重要程度随着该字词在文章中出现的频率而增加，但是同时随着在语料库中所有文章中出现的频率而下降。简而言之，就是在某一篇文章出现的次数">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,21 +155,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-TF-IDF" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      TF-IDF
+    </h1>
+  
+
+        
+        <a href="/2019/03/28/TF-IDF/" class="archive-article-date">
+  	<time datetime="2019-03-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h3><ul>
-<li>hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。）</li>
-<li>hexo clean来清理一下public的内容，然后再来重新生成和发布</li>
-<li>hexo new “postName” #新建文章</li>
-<li>hexo new page “pageName” 新建页面</li>
-<li>hexo generate 生成静态页面至public目录</li>
-<li>hexo server 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
-<li>hexo deploy 部署到GitHub</li>
-<li>hexo help  查看帮助</li>
-<li>hexo version 查看Hexo的版本</li>
+        <h3 id="什么是TF-IDF"><a href="#什么是TF-IDF" class="headerlink" title="什么是TF-IDF"></a>什么是TF-IDF</h3><p>TF-IDF（Term Frequency-Inverse Document Frequency，中文为：词频-逆文档频率)是一种用于文本检测与文本探勘的加权技术。它基于统计方法，评估一个字词对于一篇文本或者一个语料库中的其中一份文件的重要程度。字词的重要程度随着该字词在文章中出现的频率而增加，但是同时随着在语料库中所有文章中出现的频率而下降。简而言之，就是在某一篇文章出现的次数越多，在所有文章中出现的次数越少，越能表征该篇文章，作为该篇文章的特征。<br><a id="more"></a></p>
+<ul>
+<li><p>词频（TF）指的是给定的字词在某一文章中出现的频次，这个频次一般要做归一化处理，以防止它偏向长的文件。因为同一个字词在长文本中出现的频次很大程度上回高于在短文本中出现的频次，这样频次就会有失真的风险。所以通用要对频次做归一化处理，通常是词频除以文章的总词数。</p>
+<script type="math/tex; mode=display">TF(w) = \frac{tf_w}{doc_{len}}</script></li>
+<li><p>文档频率（DF）指的是数据集中包含词的文本数（<code>N(w)</code>）。</p>
+</li>
+<li><p>逆文档频率（IDF）用来权衡一个词的普遍重要性，进而修正仅仅使用词频表示的词的特征。其逻辑是如果一个词在数据集的很多文档中都出现了，那么它区分文档的是不是该文档的作用，将不是很有用了。</p>
+<script type="math/tex; mode=display">IDF(w) = log{\frac{N+1}{N(w)+1} + 1}</script><p>如果要归一化，可以用下面的方式进行放缩：</p>
+<script type="math/tex; mode=display">IDF(w) = \frac{log{\frac{N+0.5}{N(w)}}}{log(N+1.0)}</script></li>
+<li><p>TF-IDF就是指某一特定文件中高频词，以及该词在整个数据集中低文件频率，可以产生高权重的TF-IDF。其目的是过滤掉高频的常用词，提取出文档的重要特征词。</p>
+<script type="math/tex; mode=display">TF-IDF = TF * IDF</script></li>
 </ul>
 
       
@@ -199,6 +216,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/README.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/28/TF-IDF/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,6 +293,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/03/28/Win中安装ElasticSearch/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Win中安装ElasticSearch
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -311,7 +357,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -402,15 +448,23 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">EM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">解决方案</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Trick</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
               </li>
              
               <li class="article-tag-list-item">

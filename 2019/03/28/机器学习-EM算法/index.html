@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>机器学习-EM算法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/README.html">
+  <meta name="description" content="EM算法的推导给定训练样本${x^1, x^2, …, x^m}$，样本间独立。我们的目标是找到每个样例隐含的类别z，使得$$p(x, z)$的联合概率最大化。通过最大似然估计： l(\theta) = \sum_{i=1}^{m}log p(x; \theta) = \sum_{i=1}^{m}log(\sum_z{p(x, z; \theta)})其中，先对极大似然取对数，然后对每个样本的每种">
+<meta name="keywords" content="机器学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习-EM算法">
+<meta property="og:url" content="http://yoursite.com/2019/03/28/机器学习-EM算法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta property="og:description" content="EM算法的推导给定训练样本${x^1, x^2, …, x^m}$，样本间独立。我们的目标是找到每个样例隐含的类别z，使得$$p(x, z)$的联合概率最大化。通过最大似然估计： l(\theta) = \sum_{i=1}^{m}log p(x; \theta) = \sum_{i=1}^{m}log(\sum_z{p(x, z; \theta)})其中，先对极大似然取对数，然后对每个样本的每种">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T05:47:27.011Z">
+<meta property="og:updated_time" content="2019-03-29T10:25:16.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta name="twitter:title" content="机器学习-EM算法">
+<meta name="twitter:description" content="EM算法的推导给定训练样本${x^1, x^2, …, x^m}$，样本间独立。我们的目标是找到每个样例隐含的类别z，使得$$p(x, z)$的联合概率最大化。通过最大似然估计： l(\theta) = \sum_{i=1}^{m}log p(x; \theta) = \sum_{i=1}^{m}log(\sum_z{p(x, z; \theta)})其中，先对极大似然取对数，然后对每个样本的每种">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,23 +155,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-机器学习-EM算法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      机器学习-EM算法
+    </h1>
+  
+
+        
+        <a href="/2019/03/28/机器学习-EM算法/" class="archive-article-date">
+  	<time datetime="2019-03-28T05:35:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h3><ul>
-<li>hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。）</li>
-<li>hexo clean来清理一下public的内容，然后再来重新生成和发布</li>
-<li>hexo new “postName” #新建文章</li>
-<li>hexo new page “pageName” 新建页面</li>
-<li>hexo generate 生成静态页面至public目录</li>
-<li>hexo server 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
-<li>hexo deploy 部署到GitHub</li>
-<li>hexo help  查看帮助</li>
-<li>hexo version 查看Hexo的版本</li>
-</ul>
-
+        <h3 id="EM算法的推导"><a href="#EM算法的推导" class="headerlink" title="EM算法的推导"></a>EM算法的推导</h3><p>给定训练样本${x^1, x^2, …, x^m}$，样本间独立。我们的目标是找到每个样例隐含的类别<code>z</code>，使得$$p(x, z)$的联合概率最大化。通过最大似然估计：</p>
+<script type="math/tex; mode=display">l(\theta) = \sum_{i=1}^{m}log p(x; \theta) = \sum_{i=1}^{m}log(\sum_z{p(x, z; \theta)})</script><p>其中，先对极大似然取对数，然后对每个样本的每种可能类别<code>z</code>取联合分布概率和。同时也能看到，直接求解$\theta$是困难的。但是如果知道<code>z</code>，就可以很容易求解出$\theta$。<br><a id="more"></a></p>
+<p><code>EM</code>就是一种求解含有隐含变量的优化问题的有效方法。既然不能直接最大化$l(\theta)$，那么是不是可以不断的推测出$l(\theta)$的下界，然后再优化下界。落实到这个例子中，就是对于每一个样本<code>i</code>，让$Q_i$表示该样本隐含变量<code>z</code>的某种分布，所以$Q_i$满足$\sum_z{Q_i(z^i)}=1$ 且$Q_i(z^i)&gt;=0$。</p>
+<script type="math/tex; mode=display">\sum_{i}log p(x^i;\theta) = \sum_i{log(\sum_{z^i}p(x^i,z^i;\theta))}</script><script type="math/tex; mode=display">\sum_{i}log p(x^i;\theta) = \sum_i{log(\sum_{z^i}{Q_i(z^i)\frac{p(x^i,z^i;\theta)}{Q_i(z^i)}})}</script><p>然后由<code>Jensen</code>不等式可以得出：</p>
+<script type="math/tex; mode=display">\sum_{i}log p(x^i;\theta) >= \sum_i{\sum_{z^i}Q_i(z^i)log(\frac{p(x^i,z^i;\theta)}{Q_i(z^i)})}</script><p>这个过程就可以看成对$l(\theta)$求下界的过程。对于$Q_i$的选择，可以假定$\theta$已经给定，那么$l(\theta)$的值就取决于$Q_i(z^i)$和$p(x^i,z^i)$。可以通过不断的调整这两个概率的下界，使之不断地上升，以逼近$l(\theta)$的真实值。当不等式变为等式时，就说明这个调整完成。此时有</p>
+<script type="math/tex; mode=display">\frac{p(x^i,z^i;\theta)}{Q_i(z^i)} = C</script><p>这里<code>C</code>是常数，不依赖与$z^(i)$。</p>
+<p>因为$\sum_z{Q_i(z^i)}=1$，可以就此推出$\sum_zp(x^i,z^i;\theta) = c$，即多个等式分子分母相加不变，可推出每个样本的这两个概率比值是一个常数<code>c</code>。所以有：</p>
+<script type="math/tex; mode=display">Q_i(z^i) = \frac{p(x^i,z^i;\theta)}{\sum_z{p(x^i,z;\theta)}}</script><script type="math/tex; mode=display">Q_i(z^i) = \frac{p(x^i,z^i;\theta)}{p(x^i;\theta)}</script><script type="math/tex; mode=display">Q_i(z^i) = p(z^i|x^i,\theta)</script><p>至此，推导出在固定了$\theta$之后，$Q_i(z^i)$的计算公式就是后验概率。<br>同时也完成了<code>EM</code>算法的<code>E</code>步，建立了$l(\theta)$的下界。<br>接下来就是<code>M</code>步，根据给定的$Q_i(z^i)$，调整$\theta$去极大化$l(\theta)$：</p>
+<script type="math/tex; mode=display">\theta = argmax_{\theta}\sum_i{\sum_{z^i}Q_i(z^i)log(\frac{p(x^i,z^i;\theta)}{Q_i(z^i)})}</script>
       
 
       
@@ -199,6 +212,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/README.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/28/机器学习-EM算法/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,6 +285,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/03/29/Ubuntu-安装ElasticSearch/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Ubuntu-安装ElasticSearch
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/28/Win-安装ElasticSearch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Win-安装ElasticSearch</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -311,7 +354,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -406,7 +449,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Trick</a>
+                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -414,7 +457,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">EM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NLP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Python-Spider技巧 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/README.html">
+  <meta name="description" content="爬虫技巧 爬取之前，可以百度测试site: www.demo.com 以评估需要的内存消耗；">
+<meta name="keywords" content="Trick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python-Spider技巧">
+<meta property="og:url" content="http://yoursite.com/2019/03/30/Python-Spider技巧/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta property="og:description" content="爬虫技巧 爬取之前，可以百度测试site: www.demo.com 以评估需要的内存消耗；">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T05:47:27.011Z">
+<meta property="og:updated_time" content="2019-03-30T03:42:54.958Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta name="twitter:title" content="Python-Spider技巧">
+<meta name="twitter:description" content="爬虫技巧 爬取之前，可以百度测试site: www.demo.com 以评估需要的内存消耗；">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,21 +155,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Python-Spider技巧" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python-Spider技巧
+    </h1>
+  
+
+        
+        <a href="/2019/03/30/Python-Spider技巧/" class="archive-article-date">
+  	<time datetime="2019-03-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-30</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h3><ul>
-<li>hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。）</li>
-<li>hexo clean来清理一下public的内容，然后再来重新生成和发布</li>
-<li>hexo new “postName” #新建文章</li>
-<li>hexo new page “pageName” 新建页面</li>
-<li>hexo generate 生成静态页面至public目录</li>
-<li>hexo server 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
-<li>hexo deploy 部署到GitHub</li>
-<li>hexo help  查看帮助</li>
-<li>hexo version 查看Hexo的版本</li>
+        <h3 id="爬虫技巧"><a href="#爬虫技巧" class="headerlink" title="爬虫技巧"></a>爬虫技巧</h3><ul>
+<li><p>爬取之前，可以百度测试site: www.demo.com 以评估需要的内存消耗；</p>
+<a id="more"></a>
+</li>
+<li><p>记录爬取历史</p>
+<ul>
+<li><p>将URL经过MD5或SHA-1等单向哈希后再保存到hashset或数据库，这样每一个URL保存下来就只占16个字节。</p>
+</li>
+<li><p>Bit-Map方法。建立一个BitSet，将每个URL经过一个哈希函数映射到某一位，只占1字节。</p>
+</li>
+<li><p>BitMap方式记录。</p>
+</li>
+<li><p>Bloom Filter 算法。(原理是，当一个元素被加入集合时，通过K个Hash函数将这个元素映射成一个位阵列（Bit array）中的K个点，把它们置为1。检索时，我们只要看看这些点是不是都是1就（大约）知道集合中有没有它了：如果这些点有任何一个0，则被检索元素一定不在；如果都是1，则被检索元素很可能在。)</p>
+</li>
+</ul>
+</li>
 </ul>
 
       
@@ -199,6 +221,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Trick</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +282,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/README.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/30/Python-Spider技巧/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,6 +294,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/03/30/Hexo-Markdown支持数学公式配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hexo-Markdown支持数学公式配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/30/Python-虚拟环境创建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python-虚拟环境创建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -311,7 +363,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

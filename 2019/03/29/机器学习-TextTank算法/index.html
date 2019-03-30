@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>机器学习-TextTank算法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/README.html">
+  <meta name="description" content="什么是TextRankTextRank是借鉴了Google的网页排名算法（PageRank）,它将文章中的每一个句子视为网络中的一个节点。一个节点i的重要程度直接跟与之相连的其他节点j的重要度相关，对其最终的重要度提供一定的权重，这个节点j的权重又与自身的重要度和节点i，j的相似度（即连接强度）有直接关系。于是，对每个节点i给定其初始权重，然后不断迭代直到收敛，最后各个节点的权重就是该句子在整篇文">
+<meta name="keywords" content="机器学习,NLP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习-TextTank算法">
+<meta property="og:url" content="http://yoursite.com/2019/03/29/机器学习-TextTank算法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta property="og:description" content="什么是TextRankTextRank是借鉴了Google的网页排名算法（PageRank）,它将文章中的每一个句子视为网络中的一个节点。一个节点i的重要程度直接跟与之相连的其他节点j的重要度相关，对其最终的重要度提供一定的权重，这个节点j的权重又与自身的重要度和节点i，j的相似度（即连接强度）有直接关系。于是，对每个节点i给定其初始权重，然后不断迭代直到收敛，最后各个节点的权重就是该句子在整篇文">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T05:47:27.011Z">
+<meta property="og:updated_time" content="2019-03-29T10:25:25.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta name="twitter:title" content="机器学习-TextTank算法">
+<meta name="twitter:description" content="什么是TextRankTextRank是借鉴了Google的网页排名算法（PageRank）,它将文章中的每一个句子视为网络中的一个节点。一个节点i的重要程度直接跟与之相连的其他节点j的重要度相关，对其最终的重要度提供一定的权重，这个节点j的权重又与自身的重要度和节点i，j的相似度（即连接强度）有直接关系。于是，对每个节点i给定其初始权重，然后不断迭代直到收敛，最后各个节点的权重就是该句子在整篇文">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,21 +155,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-机器学习-TextTank算法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      机器学习-TextTank算法
+    </h1>
+  
+
+        
+        <a href="/2019/03/29/机器学习-TextTank算法/" class="archive-article-date">
+  	<time datetime="2019-03-29T07:44:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-29</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h3><ul>
-<li>hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。）</li>
-<li>hexo clean来清理一下public的内容，然后再来重新生成和发布</li>
-<li>hexo new “postName” #新建文章</li>
-<li>hexo new page “pageName” 新建页面</li>
-<li>hexo generate 生成静态页面至public目录</li>
-<li>hexo server 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
-<li>hexo deploy 部署到GitHub</li>
-<li>hexo help  查看帮助</li>
-<li>hexo version 查看Hexo的版本</li>
+        <h3 id="什么是TextRank"><a href="#什么是TextRank" class="headerlink" title="什么是TextRank"></a>什么是TextRank</h3><p>TextRank是借鉴了Google的网页排名算法（PageRank）,它将文章中的每一个句子视为网络中的一个节点。一个节点i的重要程度直接跟与之相连的其他节点j的重要度相关，对其最终的重要度提供一定的权重，这个节点j的权重又与自身的重要度和节点i，j的相似度（即连接强度）有直接关系。于是，对每个节点i给定其初始权重，然后不断迭代直到收敛，最后各个节点的权重就是该句子在整篇文章中的权重。最后根据句子的重要性，选取前k个句子即可作为摘要。<br><a id="more"></a></p>
+<h3 id="TextRank算法的实现"><a href="#TextRank算法的实现" class="headerlink" title="TextRank算法的实现"></a>TextRank算法的实现</h3><ul>
+<li><p>首先对文本进行分句，Talk is easy, show me the code!，直接上代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def text2sentences(self, content):</span><br><span class="line">        # ----- 分句</span><br><span class="line">        sents = []</span><br><span class="line">        content = re.sub(r&quot;\n+&quot;, &quot;。&quot;, content)</span><br><span class="line">        sentences = re.split(r&quot;。|！|？&quot;, content)</span><br><span class="line">        # ----- 过滤</span><br><span class="line">        for s in sentences:</span><br><span class="line">            s = s.strip()</span><br><span class="line">            if len(s) &lt; 3: continue</span><br><span class="line">            sents.append(s)</span><br><span class="line">        </span><br><span class="line">        return sents</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后视句子相似性的计算。这里相似度计算直接用两个句子的共现词计数进行，输入的是每个句子的terms，以避免重复分词。基于<a href="http://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf" target="_blank" rel="noopener">论文</a>的公式：<script type="math/tex">Similarith(S_i, S_j) = \frac{\{W_k | W_k \in S_i \& W_k \in S_j\}}{log(S_i)+log(S_j)}</script></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def cal_similary(self, sent1:list, sent2:list):</span><br><span class="line">        co_occur = 0</span><br><span class="line">        set1 = set(sent1)</span><br><span class="line">        set2 = set(sent2)</span><br><span class="line">        for w in set1:</span><br><span class="line">            if w in set2:</span><br><span class="line">                co_occur += 1.0</span><br><span class="line">        </span><br><span class="line">        denominator = math.log(len(set1)+math.log(len(set2)))</span><br><span class="line">        if abs(denominator)&lt;1e-10 or co_occur&lt;1e-10:</span><br><span class="line">            return 0.0</span><br><span class="line">        return co_occur/denominator</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接着利用强大的networkx进行迭代。networkx会创建一个Graph实例，调用它的pagerank方法即可对graph实例进行迭代。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">def text_rank(self, sentences, num_summary=10, pagerank_config=&#123;&quot;alpha&quot;:0.85&#125;):</span><br><span class="line">        sorted_sentences = []</span><br><span class="line">        sentences_len = len(sentences)</span><br><span class="line">        sentences_cut = []</span><br><span class="line">        for sent in sentences:</span><br><span class="line">            tmp = []</span><br><span class="line">            cut_sent = jieba.cut(sent)</span><br><span class="line">            for i in cut_sent:</span><br><span class="line">                tmp.append(i)</span><br><span class="line">            sentences_cut.append(tmp)</span><br><span class="line">        graph = np.zeros((sentences_len, sentences_len))</span><br><span class="line">        for x in range(sentences_len):</span><br><span class="line">            for y in range(x, sentences_len):</span><br><span class="line">                similary = self.cal_similary(sentences_cut[x], sentences_cut[y])</span><br><span class="line">                graph[x, y] = similary</span><br><span class="line">                graph[y, x] = similary</span><br><span class="line">        nx_graph = networkx.from_numpy_matrix(graph)</span><br><span class="line">        scores = networkx.pagerank(nx_graph, **pagerank_config)</span><br><span class="line">        sorted_scores = sorted(scores.items(), key=lambda item: item[1], reverse=True)</span><br><span class="line"></span><br><span class="line">        for ix, score in sorted_scores:</span><br><span class="line">            item = &#123;&quot;sent&quot;: sentences[ix], &quot;score&quot;: score, &quot;index&quot;: ix&#125;</span><br><span class="line">            sorted_sentences.append(item)</span><br><span class="line">        </span><br><span class="line">        return sorted_sentences[:num_summary]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>至此即可得到前num_summary个句子，作为摘要。但是结果是根据句子权重排序的，只表达了句子的重要性，逻辑上很混乱。所以需要重新组织，这里我们直接按照文章顺序组织句子。同时，组织调度上述各个模块。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def main(self, content, num_summary=None):</span><br><span class="line">        sentences = self.text2sentences(content)</span><br><span class="line">        num = len(sentences)//2</span><br><span class="line">        if num_summary: num=num_summary</span><br><span class="line">        rank_summary = self.text_rank(sentences, num_summary=num)</span><br><span class="line">        sorted_summary = sorted(rank_summary, key=lambda x: x[&quot;index&quot;], reverse=False)</span><br><span class="line">        return sorted_summary</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>附上我的测试结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0.01282941484310748 这篇文章将描绘一下Kensho、文因互联、数库科技、通联数据在这个领域的探索和尝试,看看新时代正在掀起的巨浪</span><br><span class="line">0.01418767345521122 2017年6月,在北京朝阳区的一个居民楼的办公室内,鲍捷和他的20名创业伙伴正在摸索打造一款智能金融分析工具,而他的目标正是华尔街的AlphaSense和Kensho</span><br><span class="line">0.013448143603193357 2001年,他离开中国进入美国,先后为Lowa State Univ博士、RPI博士后、MIT访问研究员、BBN访问研究员,在美国完成了11年人工智能的学习和研究</span><br><span class="line">0.015162127406970309 2015年底,他看到了Kensho在金融领域带来的革命,结合国内的投资需求,他选择了在新三板领域开始切入,当时只有7名员工,经过半年研发,文因在2016年5月推出了“快报”和</span><br><span class="line">“搜索”</span><br><span class="line">0.014709286432136398 通联数据的野心很庞大,目前员工达到300人,正面与Wind、同花顺、东方财富竞争,并推出了PC和移动端的资产管理业务的一站式服务平台,内容涵盖大数据分析、智能投资研究</span><br><span class="line">、量化研究、智能投顾和资产配置管理服务等多个领域</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -199,6 +221,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/README.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/29/机器学习-TextTank算法/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,6 +298,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/03/29/Win-pip安装插件报编码错误/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Win-pip安装插件报编码错误
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/29/Ubuntu-安装ElasticSearch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ubuntu-安装ElasticSearch</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -311,7 +367,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -406,7 +462,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Trick</a>
+                <a href="javascript:void(0)" class="js-tag color4">ElasticSearch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -414,7 +470,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">EM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NLP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>

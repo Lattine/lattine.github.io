@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Python-技巧 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/README.html">
+  <meta name="description" content="python调用外部命令（windows unix命令）# subprocess 相比os.system 的优势在于更灵活，可以得到执行状态代码 from subprocess import call call([&amp;quot;ls&amp;quot;, &amp;quot;-l&amp;quot;])">
+<meta name="keywords" content="Trick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python-技巧">
+<meta property="og:url" content="http://yoursite.com/2019/03/30/Python-技巧/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta property="og:description" content="python调用外部命令（windows unix命令）# subprocess 相比os.system 的优势在于更灵活，可以得到执行状态代码 from subprocess import call call([&amp;quot;ls&amp;quot;, &amp;quot;-l&amp;quot;])">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T05:47:27.011Z">
+<meta property="og:updated_time" content="2019-03-30T03:43:00.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Hexo 常用命令 hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。） hexo clean来清理一下public的内容，然后再来重新生成和发布 hexo new “postName” #新建文章 hexo new page “pageName” 新建页面 hexo generate 生成静态页面至public目录 hexo">
+<meta name="twitter:title" content="Python-技巧">
+<meta name="twitter:description" content="python调用外部命令（windows unix命令）# subprocess 相比os.system 的优势在于更灵活，可以得到执行状态代码 from subprocess import call call([&amp;quot;ls&amp;quot;, &amp;quot;-l&amp;quot;])">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,23 +155,76 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Python-技巧" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python-技巧
+    </h1>
+  
+
+        
+        <a href="/2019/03/30/Python-技巧/" class="archive-article-date">
+  	<time datetime="2019-03-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-30</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h3><ul>
-<li>hexo init 初始化（该命令只能做空目录执行，否则会报错。此时，可以将.git等文件夹剪切出去，完事后在拷贝回来。）</li>
-<li>hexo clean来清理一下public的内容，然后再来重新生成和发布</li>
-<li>hexo new “postName” #新建文章</li>
-<li>hexo new page “pageName” 新建页面</li>
-<li>hexo generate 生成静态页面至public目录</li>
-<li>hexo server 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
-<li>hexo deploy 部署到GitHub</li>
-<li>hexo help  查看帮助</li>
-<li>hexo version 查看Hexo的版本</li>
-</ul>
+        <h3 id="python调用外部命令（windows-unix命令）"><a href="#python调用外部命令（windows-unix命令）" class="headerlink" title="python调用外部命令（windows unix命令）"></a>python调用外部命令（windows unix命令）</h3><pre><code># subprocess 相比os.system 的优势在于更灵活，可以得到执行状态代码
+from subprocess import call
+call([&quot;ls&quot;, &quot;-l&quot;])
+</code></pre><a id="more"></a>
+<h3 id="Python模块：tqdm－显示进度条"><a href="#Python模块：tqdm－显示进度条" class="headerlink" title="Python模块：tqdm－显示进度条"></a>Python模块：tqdm－显示进度条</h3><pre><code>from tqdm import tqdm
+for item in tqdm(items):
+    process(item)
+</code></pre><h3 id="文件编码转换"><a href="#文件编码转换" class="headerlink" title="文件编码转换"></a>文件编码转换</h3><pre><code>def convert_encoding(input_file, output_file, input_encoding=&#39;gbk&#39;, output_encoding=&#39;utf8&#39;):
+    with open(input_file, &#39;rb&#39;) as input_fd, open(output_file, &#39;wb&#39;) as output_fd:
+        file_content = input_fd.read()
+        unicode_file_content = file_content.decode(input_encoding)
+        output_fd.write(unicode_file_content.encode(output_encoding))
+</code></pre><h3 id="Python连接MySQL数据库-sudo-pip-install-mysql-connector-python-—allow-external-mysql-connector-python"><a href="#Python连接MySQL数据库-sudo-pip-install-mysql-connector-python-—allow-external-mysql-connector-python" class="headerlink" title="Python连接MySQL数据库 (sudo pip install mysql-connector-python —allow-external mysql-connector-python)"></a>Python连接MySQL数据库 (sudo pip install mysql-connector-python —allow-external mysql-connector-python)</h3><pre><code>import mysql.connector as mc
+my_connect = mc.connect(user=&#39;root&#39;, password=&#39;passwd&#39;, host=&#39;127.0.0.1&#39;, database=&#39;testdatabase&#39;)
+cur = my_connect.cursor()
+cur = execute(&quot;SELECT * FROM table&quot;)
+cur = execute(&quot;INSERT INTO table(name, age) VALUES (&#39;youname&#39;, 22)&quot;)
+my_connect.commit()
+cur.close()
+my_connect.close()
+</code></pre><h3 id="Python发邮件"><a href="#Python发邮件" class="headerlink" title="Python发邮件"></a>Python发邮件</h3><pre><code>import smtplib
+from email.mime.text import MIMEText
 
+
+# 发邮件命令
+def send_email(host, username, passwd, send_to, subject, content):
+    msg = MIMEText(content.encode(&#39;utf8&#39;), _subtype=&#39;html&#39;, _charset=&#39;utf8&#39;)
+    msg[&#39;From&#39;] = username
+    msg[&#39;Subject&#39;] = u&#39;%s&#39; % subject
+    msg[&#39;To&#39;] = &quot;,&quot;.join(send_to)
+
+    try:
+        s = smtplib.SMTP_SSL(host, 465)
+        s.login(username, passwd)
+        s.sendmail(username, send_to, msg.as_string())
+        s.close()
+    except Exception as e:
+        print(&#39;Exception: send email failed&#39;, e)
+
+
+# 构建发送的内容
+def composite_email(subject, content):
+    host = &#39;smtp.exmail.qq.com&#39;
+    username = &#39;username&#39;
+    passwd = &#39;password&#39;
+    to_list = [&#39;to@test.com&#39;]
+    subject = subject
+    content = content
+    send_email(host, username, passwd, to_list, subject, content)
+</code></pre>
       
 
       
@@ -199,6 +253,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Trick</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +314,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/README.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/30/Python-技巧/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,6 +326,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/03/30/Ubuntu-安装ElasticSearch/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Ubuntu-安装ElasticSearch
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/30/Python-Flask部署/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python-Flask部署</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -311,7 +395,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
